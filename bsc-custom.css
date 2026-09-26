@@ -1,8 +1,8 @@
 /* ========================================================================== 
 BACKCOUNTRY SKIING CANADA — MASTER CUSTOM STYLESHEET 
-==========================================================================
+========================================================================== */
 /* Global Smooth Scrolling &amp; Header Offset */ 
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
 /* TEMPORARY TEST RULE */
-body { border-top: 8px solid #e03c11 !important; /* Bright BSC Red/Orange line across top of page */ }
+body { border-top: 8px solid #e03c11 !important;}
