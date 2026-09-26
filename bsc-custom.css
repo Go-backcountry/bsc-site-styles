@@ -1,8 +1,159 @@
-/* ========================================================================== 
-BACKCOUNTRY SKIING CANADA — MASTER CUSTOM STYLESHEET 
-========================================================================== */
-/* Global Smooth Scrolling &amp; Header Offset */ 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+/* ==========================================================================
+   BACKCOUNTRY SKIING CANADA — MASTER CUSTOM STYLESHEET
+   GitHub Repository: Go-backcountry / bsc-site-styles
+   ========================================================================== */
 
-/* TEMPORARY TEST RULE */
-body { border-top: 8px solid #e03c11 !important;}
+/* ==========================================================================
+   SECTION 1: LEGACY QUICKSILK BASE STYLES &amp; UI UTILITIES
+   ========================================================================== */
+
+/* ******* TYPOGRAPHY UTILITIES ******* */
+.app__font--h1 { text-transform: uppercase; letter-spacing: -0.01em; }
+.app__font--h1.large { line-height: 0.95; font-size: clamp(48px, 6vw, 80px); }
+.app__font--h1.x-large { line-height: 0.92; font-size: clamp(72px, 10vw, 130px); }
+
+.app__font--h2 { text-transform: uppercase; }
+.app__font--h2.small { font-size: 26px; font-weight: 800; letter-spacing: 0.02em; }
+
+.app__font--h3 { text-transform: uppercase; }
+.app__font--h4 { text-transform: uppercase; letter-spacing: 0.02em; }
+.app__font--h5 { text-transform: uppercase; letter-spacing: 0.12em; }
+.app__font--h6 { text-transform: uppercase; letter-spacing: 0.2em; }
+
+.app__font--button { text-transform: uppercase; letter-spacing: 0.12em; }
+.h1 { text-transform: uppercase; letter-spacing: -0.01em; }
+.h2 { text-transform: uppercase; }
+.h3 { text-transform: uppercase; }
+.h4 { text-transform: uppercase; letter-spacing: 0.02em; }
+.h5 { text-transform: uppercase; letter-spacing: 0.12em; }
+.h6 { text-transform: uppercase; letter-spacing: 0.2em; }
+
+/* ******* COLOR UTILITIES ******* */
+.tpl__color--accent { color: var(--color-accent, #e03c11); }
+.tpl__color--muted { color: var(--color-text-muted, #888888); }
+
+/* ******* BADGES &amp; BUTTONS ******* */
+.tpl__badge--accent { 
+  font-size: 11px;
+  padding: 6px 12px; 
+  display: inline-block; 
+  border: 1px solid color-mix(in srgb, var(--color-accent, #e03c11) 40%, transparent); 
+  border-radius: 20px; 
+  text-transform: uppercase; 
+  font-weight: 600; 
+  color: var(--color-accent, #e03c11); 
+}
+
+.button.button--black { 
+  background: rgba(6, 10, 13, 0.7); 
+  color: var(--color-text, #ffffff); 
+  border-radius: 4px;
+}
+
+/* ******* MEGA HUB COMPONENTS ******* */
+.mega-hub-img { width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; margin-bottom: 20px; } 
+.mega-hub-img img { height: 100%; width: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1); } 
+.mega-hub:hover .mega-hub-img img { transform: scale(1.04); } 
+.mega-hub-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent, #e03c11); margin-bottom: 8px; display: block; } 
+.mega-hub-title { font-weight: 800; font-size: 22px; text-transform: uppercase; line-height: 1.1; color: var(--color-text, #ffffff); margin-bottom: 10px; } 
+.mega-hub-desc { font-size: 13px; color: var(--color-text-secondary, #cccccc); line-height: 1.55; margin-bottom: 18px; } 
+.mega-hub-cta { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent, #e03c11); transition: gap 0.2s; } 
+.mega-hub-cta:hover { gap: 12px; text-decoration: none; } 
+.mega-footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--color-border, #333333); display: flex; align-items: center; justify-content: space-between; } 
+.mega-footer-text { font-size: 11px; color: var(--color-text-muted, #888888); letter-spacing: 0.08em; } 
+
+body { width: 100%; height: auto; min-height: 100%; }
+
+/* ==========================================================================
+   SECTION 2: GLOBAL LAYOUT &amp; SMOOTH SCROLLING
+   ========================================================================== */
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 80px; /* Offset for sticky header */
+}
+
+/* ==========================================================================
+   SECTION 3: ON-PAGE JUMP NAVIGATION BAR
+   ========================================================================== */
+.bsc-jump-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid var(--color-accent, #e03c11);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+
+.bsc-jump-nav-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bsc-jump-nav-label {
+  color: #a0a0a0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.bsc-jump-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bsc-jump-nav-list::-webkit-scrollbar {
+  display: none;
+}
+
+.bsc-jump-link {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #2a2a2a;
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 20px;
+  border: 1px solid #3a3a3a;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+
+.bsc-jump-link:hover,
+.bsc-jump-link:focus {
+  background-color: var(--color-accent, #e03c11);
+  border-color: var(--color-accent, #e03c11);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .bsc-jump-nav-label {
+    display: none;
+  }
+  .bsc-jump-nav-container {
+    padding: 0 10px;
+  }
+  .bsc-jump-link {
+    font-size: 0.82rem;
+    padding: 5px 12px;
+  }
+}
+
+```
