@@ -1,13 +1,10 @@
 /* ==========================================================================
    BACKCOUNTRY SKIING CANADA — MASTER CUSTOM STYLESHEET
-   GitHub Repository: Go-backcountry / bsc-site-styles
    ========================================================================== */
 
 /* ==========================================================================
    SECTION 1: LEGACY QUICKSILK BASE STYLES &amp; UI UTILITIES
    ========================================================================== */
-
-/* ******* TYPOGRAPHY UTILITIES ******* */
 .app__font--h1 { text-transform: uppercase; letter-spacing: -0.01em; }
 .app__font--h1.large { line-height: 0.95; font-size: clamp(48px, 6vw, 80px); }
 .app__font--h1.x-large { line-height: 0.92; font-size: clamp(72px, 10vw, 130px); }
@@ -28,11 +25,9 @@
 .h5 { text-transform: uppercase; letter-spacing: 0.12em; }
 .h6 { text-transform: uppercase; letter-spacing: 0.2em; }
 
-/* ******* COLOR UTILITIES ******* */
 .tpl__color--accent { color: var(--color-accent, #e03c11); }
 .tpl__color--muted { color: var(--color-text-muted, #888888); }
 
-/* ******* BADGES &amp; BUTTONS ******* */
 .tpl__badge--accent { 
   font-size: 11px;
   padding: 6px 12px; 
@@ -50,7 +45,6 @@
   border-radius: 4px;
 }
 
-/* ******* MEGA HUB COMPONENTS ******* */
 .mega-hub-img { width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; margin-bottom: 20px; } 
 .mega-hub-img img { height: 100%; width: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1); } 
 .mega-hub:hover .mega-hub-img img { transform: scale(1.04); } 
@@ -69,7 +63,7 @@ body { width: 100%; height: auto; min-height: 100%; }
    ========================================================================== */
 html { 
   scroll-behavior: smooth; 
-  scroll-padding-top: 80px; /* Offset for sticky header */
+  scroll-padding-top: 80px; 
 }
 
 /* ==========================================================================
@@ -143,23 +137,9 @@ html {
   transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
-  .bsc-jump-nav-label {
-    display: none;
-  }
-  .bsc-jump-nav-container {
-    padding: 0 10px;
-  }
-  .bsc-jump-link {
-    font-size: 0.82rem;
-    padding: 5px 12px;
-  }
-}
-
 /* ==========================================================================
    SECTION 4: REVIEW CARDS &amp; PRODUCT BADGES
    ========================================================================== */
-
 .bsc-review-card {
   background-color: #1a1a1a;
   border: 1px solid #2a2a2a;
@@ -169,7 +149,6 @@ html {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* Header &amp; Badges */
 .bsc-card-header {
   display: flex;
   justify-content: space-between;
@@ -224,7 +203,6 @@ html {
   color: #888888;
 }
 
-/* Titles &amp; Specs */
 .bsc-card-title {
   color: #ffffff;
   font-size: 1.6rem;
@@ -256,7 +234,6 @@ html {
   color: #ffffff;
 }
 
-/* Pros &amp; Cons */
 .bsc-pro-con-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -294,7 +271,6 @@ html {
   line-height: 1.5;
 }
 
-/* Dual-Geo CTA Buttons */
 .bsc-card-cta-bar {
   display: flex;
   gap: 10px;
@@ -347,8 +323,25 @@ html {
   color: #ffffff !important;
 }
 
-/* Mobile Responsive */
+.bsc-flag-tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  margin-right: 6px;
+}
+
 @media (max-width: 768px) {
+  .bsc-jump-nav-label {
+    display: none;
+  }
+  .bsc-jump-nav-container {
+    padding: 0 10px;
+  }
+  .bsc-jump-link {
+    font-size: 0.82rem;
+    padding: 5px 12px;
+  }
   .bsc-pro-con-grid {
     grid-template-columns: 1fr;
   }
