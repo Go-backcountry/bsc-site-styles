@@ -155,3 +155,210 @@ html {
     padding: 5px 12px;
   }
 }
+
+```
+/* ==========================================================================
+   SECTION 4: REVIEW CARDS &amp; PRODUCT BADGES
+   ========================================================================== */
+
+.bsc-review-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Header &amp; Badges */
+.bsc-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bsc-badge-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bsc-category-badge {
+  background-color: var(--color-accent, #e03c11);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.bsc-editor-badge {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #3a3a3a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.bsc-score-box {
+  background-color: #0f0f0f;
+  border: 1px solid var(--color-accent, #e03c11);
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.bsc-score-num {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--color-accent, #e03c11);
+}
+
+.bsc-score-denom {
+  font-size: 0.8rem;
+  color: #888888;
+}
+
+/* Titles &amp; Specs */
+.bsc-card-title {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+}
+
+.bsc-card-subtitle {
+  color: #cccccc;
+  font-size: 0.95rem;
+  margin: 0 0 18px 0;
+  line-height: 1.4;
+}
+
+.bsc-specs-strip {
+  display: flex;
+  gap: 20px;
+  background-color: #121212;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.bsc-specs-strip strong {
+  color: #ffffff;
+}
+
+/* Pros &amp; Cons */
+.bsc-pro-con-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.bsc-pro-box, .bsc-con-box {
+  background-color: #222222;
+  padding: 14px 18px;
+  border-radius: 6px;
+}
+
+.bsc-pro-title {
+  color: #4caf50;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.bsc-con-title {
+  color: #f44336;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.bsc-pro-box ul, .bsc-con-box ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  color: #dddddd;
+  line-height: 1.5;
+}
+
+/* Dual-Geo CTA Buttons */
+.bsc-card-cta-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bsc-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+}
+
+.bsc-btn-cad {
+  background-color: var(--color-accent, #e03c11);
+  color: #ffffff !important;
+}
+
+.bsc-btn-cad:hover {
+  background-color: #c7320c;
+}
+
+.bsc-btn-usd {
+  background-color: #2a2a2a;
+  color: #ffffff !important;
+  border: 1px solid #444444;
+}
+
+.bsc-btn-usd:hover {
+  background-color: #3a3a3a;
+  border-color: #666666;
+}
+
+.bsc-btn-review {
+  background-color: transparent;
+  color: var(--color-accent, #e03c11) !important;
+  border: 1px solid var(--color-accent, #e03c11);
+  flex: 0 0 auto;
+}
+
+.bsc-btn-review:hover {
+  background-color: var(--color-accent, #e03c11);
+  color: #ffffff !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .bsc-pro-con-grid {
+    grid-template-columns: 1fr;
+  }
+  .bsc-card-cta-bar {
+    flex-direction: column;
+  }
+  .bsc-btn {
+    width: 100%;
+  }
+}
+
+```
