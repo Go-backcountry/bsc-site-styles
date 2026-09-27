@@ -142,13 +142,14 @@ html {
    ========================================================================== */
 
 /* Hide raw GTM card metadata before JavaScript runs */ 
-.bsc-card-wrapper &gt; .meta-rank, 
-.bsc-card-wrapper &gt; .meta-score, 
-.bsc-card-wrapper &gt; .meta-editor, 
-.bsc-card-wrapper &gt; .meta-tech, 
-.bsc-card-wrapper &gt; .meta-use, 
-.bsc-card-wrapper &gt; .meta-ratings 
-{ display: none !important; }
+.meta-rank, 
+.meta-score, 
+.meta-editor, 
+.meta-tech, 
+.meta-use, 
+.meta-ratings { 
+  display: none !important; 
+}
 
 .bsc-review-card {
   background-color: #111111;
